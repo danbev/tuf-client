@@ -11,13 +11,22 @@ using the following command:
 $ cargo install --force tuftool
 ```
 
+### Generating the TUF repository
 And we can generate root.json, the private and public key used for
 signing/verification, and the TUF repository using the following script:
 ```console
 $ ./tuftool.sh
 ```
+After this command has been run the TUF repository will be created a directory
+named `tuf_repo`, and the `keys` directory will contain the private key.
 
 ### Usage
+The example uses the [tough](https://crates.io/crates/tough) library, and
+starts by loading the repository, and after that downloading an artifact
+named `artifact.txt` from the TUF repository and printing out the contents:
 ```console
-$ cargo r -- --repo-dir tuf_repo --trusted-root-json ./root.json --download-dir tuf_client
+$ cargo r --quiet -- --repo-dir tuf_repo --trusted-root-json tuf_client/root.json --download-dir tuf_client
+TUF client example...
+Tring to fetch artifact.txt from TUF repository
+Fetched artifact.text: "something\n"
 ```

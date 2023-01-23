@@ -73,7 +73,7 @@ fn main() {
         let mut buffer = Vec::new();
         a.read_to_end(&mut buffer).unwrap();
         println!(
-            "Fetched artifact.text: {:?}",
+            "Fetched artifact.txt: {:?}",
             str::from_utf8(&buffer).unwrap()
         );
     }
