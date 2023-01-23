@@ -12,7 +12,7 @@ $ cargo install --force tuftool
 ```
 
 And we can generate root.json, the private and public key used for
-signing/verification using the following script:
+signing/verification, and the TUF repository using the following script:
 ```console
 $ ./tuftool.sh
 ```
