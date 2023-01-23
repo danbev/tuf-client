@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p keys > /dev/null
+
 tuftool root init root.json
 
 tuftool root set-threshold root.json snapshot 1
