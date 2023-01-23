@@ -11,6 +11,15 @@ using the following command:
 $ cargo install --force tuftool
 ```
 
+### Initial directory layout
+The [tuf_client](./tuf_client) directory initially contains a single file named
+`root.json` which is only show that a client need a copy of this file shipped
+with the software as explained in [section 5.2 of the TUF specification](https://theupdateframework.github.io/specification/latest/index.html#load-trusted-root).
+
+The [artifacts](./artifacts) directory contains a single artifact which is
+simulating something that a TUF client is interested in downloading and using
+is a secure way.
+
 ### Generating the TUF repository
 And we can generate root.json, the private and public key used for
 signing/verification, and the TUF repository using the following script:
