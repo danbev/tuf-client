@@ -1,1 +1,7 @@
 target
+
+
+# Ignore tuf_client/ files except root.json
+tuf_client/*snapshot.json
+tuf_client/*targets.json
+tuf_client/*timestamp.json
