@@ -65,7 +65,7 @@ fn main() {
         .load()
         .unwrap();
 
-    println!("Tring to fetch artifact.txt from TUF repository");
+    println!("Trying to fetch artifact.txt from TUF repository");
     let artifact = repository
         .read_target(&TargetName::from_str("artifact.txt").unwrap())
         .unwrap();

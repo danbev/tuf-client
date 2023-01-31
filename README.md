@@ -1,6 +1,6 @@
 ## The Update Framework (TUF) client
-This repository contains a very basic TUF client, the sole purpose of this is
-document and understand how a TUF client works.
+This repository contains a very basic TUF client, the sole purpose of this
+project is document and understand how a TUF client works.
 
 ### Installing tuftool
 This example is going to use a tool called
@@ -13,20 +13,21 @@ $ cargo install --force tuftool
 
 ### Initial directory layout
 The [tuf_client](./tuf_client) directory initially contains a single file named
-`root.json` which is only show that a client need a copy of this file shipped
-with the software as explained in [section 5.2 of the TUF specification](https://theupdateframework.github.io/specification/latest/index.html#load-trusted-root).
+`root.json` which is only to make it explicit that a client needs a copy of this
+trusted root.json shipped with the software as explained in
+[section 5.2 of the TUF specification](https://theupdateframework.github.io/specification/latest/index.html#load-trusted-root).
 
 The [artifacts](./artifacts) directory contains a single artifact which is
 simulating something that a TUF client is interested in downloading and using
 is a secure way.
 
 ### Generating the TUF repository
-And we can generate root.json, the private and public key used for
+We can generate root.json, the private and public key used for
 signing/verification, and the TUF repository using the following script:
 ```console
 $ ./tuftool.sh
 ```
-After this command has been run the TUF repository will be created a directory
+After this command has been run, the TUF repository will be created a directory
 named `tuf_repo`, and the `keys` directory will contain the private key.
 
 ### Usage
